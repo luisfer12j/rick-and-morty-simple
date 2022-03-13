@@ -50,6 +50,16 @@ html {
   font-size: 20px;
 }
 
+.charging-screen{
+  width: 80%;
+  height: 50vh;
+  color: #fff;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .location-info {
   background-color: #062226;
   width: 890px;
@@ -68,6 +78,20 @@ html {
 
 .location-info > p > b {
   font-size: 24px;
+}
+
+.none-population{
+  width: 80%;
+  height: 50vh;
+  color: #fff;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none-population>p{
+  font-size: 50px;
 }
 
 .residents-list {

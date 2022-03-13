@@ -5,6 +5,7 @@ import LocationInfo from "./components/LocationInfo";
 import SearchBox from "./components/SearchBox";
 import ResidentsList from "./components/ResidentsList";
 import Header from "./components/Header";
+import ChargingScreen from "./components/ChargingScreen";
 
 function App() {
   const [location, setLocation] = useState({});
@@ -17,9 +18,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBox setLocation={setLocation} />
-      <LocationInfo location={location} />
-      <ResidentsList residents={location.residents} />
+      {location.residents!==undefined? 
+        <>
+          <SearchBox setLocation={setLocation} />
+          <LocationInfo location={location} />
+          <ResidentsList residents={location.residents} />
+        </>
+      : <ChargingScreen/>}
     </div>
   );
 }

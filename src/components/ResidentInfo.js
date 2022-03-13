@@ -22,19 +22,13 @@ const ResidentInfo = ({ resident }) => {
       <img src={character.image} alt="" />
       <h2>{character.name}</h2>
       <div className="info-container">
-        <p>
-          RAZA
-          <br />
+        <p>RAZA<br />
           <span>{character.species}</span>
         </p>
-        <p>
-          ORIGIN
-          <br />
+        <p>ORIGIN<br />
           <span>{character.origin?.name}</span>
         </p>
-        <p>
-          EPISODES WHERE APEAR
-          <br />
+        <p>EPISODES WHERE APEAR<br />
           <span>{character.episode?.length}</span>
         </p>
       </div>
