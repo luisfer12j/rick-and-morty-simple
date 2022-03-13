@@ -1,10 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const ResidentInfo = (resident) => {
-    const url = resident.resident
+const ResidentInfo = ({resident}) => {
+    const url = resident
     const [character,setCharacter]=useState({})
-    useState(()=>{
+    useEffect(()=>{
         axios.get(url)
         .then(res=>setCharacter(res.data))
     },[url])
