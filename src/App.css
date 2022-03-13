@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   height: 100%;
 }
 
@@ -12,87 +12,86 @@ html{
   text-align: center;
   height: 100%;
   width: 100%;
-  background-color: #05292E;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
+  background-color: #05292e;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
 }
 
-.header>img{
+.header > img {
   width: 100%;
 }
 
-.search-box{
+.search-box {
   width: 890px;
   margin: 20px auto;
   height: 80px;
-  color: #FFF;
+  color: #fff;
 }
 
-.search-box>input{
-  box-shadow: 2px 2px 8px rgba(0,0, 0, 0.3);
+.search-box > input {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   height: 50px;
   width: 80%;
   border: none;
   text-align: center;
   background-color: #062226;
-  color: #FFF;
+  color: #fff;
   font-size: 20px;
 }
 
-.search-box>button{
+.search-box > button {
   height: 50px;
   width: 20%;
   border: 1px solid white;
-  box-shadow: 2px 2px 8px rgba(0,0, 0, 0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   background-color: #062226;
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
   font-size: 20px;
 }
 
-.location-info{
+.location-info {
   background-color: #062226;
   width: 890px;
   height: 126px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
 }
 
-.location-info>h2{
+.location-info > h2 {
   grid-column: 1/4;
   text-align: center;
   font-size: 30px;
   align-self: center;
 }
 
-.location-info>p>b{
+.location-info > p > b {
   font-size: 24px;
 }
 
-.residents-list{
+.residents-list {
   width: 890px;
   margin: 16px auto;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  background-color: #05292E;
+  background-color: #05292e;
   justify-content: space-between;
 }
 
-
-.residentent-info{
+.residentent-info {
   width: 437px;
   height: 696px;
   background-color: #062226;
   margin-bottom: 16px;
+
   border-radius: 5px;
   text-align: start;
   position: relative;
 }
 
-.status-info{
+.status-info {
   position: absolute;
   width: 180px;
   height: 42px;
@@ -103,10 +102,9 @@ html{
   display: flex;
   align-items: center;
   padding-left: 8px;
-
 }
 
-.unknown{
+.unknown {
   width: 19px;
   height: 19px;
   background-color: #938686;
@@ -114,33 +112,33 @@ html{
   margin-right: 12px;
 }
 
-.alive{
+.alive {
   width: 19px;
   height: 19px;
-  background-color: #4AB648;
+  background-color: #4ab648;
   border-radius: 9.5px;
   margin-right: 12px;
 }
 
-.dead{
+.dead {
   width: 19px;
   height: 19px;
-  background-color: #B94343;
+  background-color: #b94343;
   border-radius: 9.5px;
   margin-right: 12px;
 }
 
-.residentent-info>h3{
+.residentent-info > h3 {
   font-size: 18px;
   font-weight: 700;
 }
 
-.residentent-info>img{
+.residentent-info > img {
   width: 100%;
   border-radius: 5px 5px 0px 0px;
 }
 
-.residentent-info>h2{
+.residentent-info > h2 {
   font-size: 32px;
   font-weight: 300;
   width: 90%;
@@ -149,7 +147,7 @@ html{
   text-align: start;
 }
 
-.info-container{
+.info-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -158,15 +156,69 @@ html{
   height: 170px;
 }
 
-.info-container>p{
-  color: #7E7E7E;
+.info-container > p {
+  color: #7e7e7e;
 }
 
-.info-container>p>span{
-  color: #FFF;
+.info-container > p > span {
+  color: #fff;
 }
 
-.residentent-info>p{
+.residentent-info > p {
   width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .search-box {
+    width: 80%;
+  }
+
+  .location-info {
+    width: 80%;
+  }
+
+  .residents-list {
+    width: 80%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .residentent-info {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .search-box > input {
+    font-size: 12px;
+  }
+
+  .search-box > button {
+    font-size: 12px;
+  }
+
+  .location-info {
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .location-info > h2 {
+    width: 100%;
+  }
+
+  .location-info > p {
+    width: 100%;
+  }
+
+  .residentent-info {
+    height: 600px;
+  }
+
+  .residentent-info > h2 {
+    font-size: 24px;
+  }
 }
