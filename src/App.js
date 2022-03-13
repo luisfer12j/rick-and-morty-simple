@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import './App.css';
+import LocationInfo from './components/LocationInfo'
+import SearchBox from './components/SearchBox'
+import ResidentsList from './components/ResidentsList'
+import Header from './components/Header';
 
-function App() {
+
+function App(){
+  const [location,setLocation]=useState({})
+  useEffect(()=>{
+    const random = Math.floor((Math.random()*125)+1)
+    axios.get(`https://rickandmortyapi.com/api/location/${random}`)
+    .then((res)=>setLocation(res.data))
+  },[])
+  console.log(location)
+  console.log(location.residents)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <SearchBox setLocation={setLocation}/>
+      <LocationInfo location={location}/>
+      <ResidentsList residents={location.residents}/>
     </div>
   );
 }
